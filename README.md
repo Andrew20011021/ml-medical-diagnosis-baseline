@@ -27,18 +27,19 @@ data/raw/PNEUMONIA/
 python main.py
 
 All evaluation charts will be saved into output/.
+
 ## Model Visualization Results
 ### Random Forest
-!\[RandomForest Confusion Matrix\](assets/RandomForest\_cm.png)
-!\[RandomForest ROC Curve\](assets/RandomForest\_roc.png)
+![RandomForest Confusion Matrix](assets/RandomForest_cm.png)
+![RandomForest ROC Curve](assets/RandomForest_roc.png)
 
-###SVM
-!\[SVC Confusion Matrix\](assets/SVC\_cm.png)
-!\[SVC ROC Curve\](assets/SVC\_roc.png)
+### SVM
+![SVC Confusion Matrix](assets/SVC_cm.png)
+![SVC ROC Curve](assets/SVC_roc.png)
 
-###LightCNN
-!\[LightCNN Confusion Matrix\](assets/LightCNN\_cm.png)
-!\[LightCNN ROC Curve\](assets/LightCNN\_roc.png)
+### LightCNN
+![LightCNN Confusion Matrix](assets/LightCNN_cm.png)
+![LightCNN ROC Curve](assets/LightCNN_roc.png)
 
 ## Result Discussion
 - Random Forest and SVM reach 96% test accuracy based on flattened pixel features, serving as strong traditional ML baselines.
