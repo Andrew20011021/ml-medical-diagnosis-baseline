@@ -17,21 +17,3 @@ https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
 1. Install dependencies
 ```bash
 pip install -r requirements.txt
-
-## Model Visualization Results
-### Random Forest
-!\[RandomForest Confusion Matrix\](assets/RandomForest\_cm.png)
-!\[RandomForest ROC Curve\](assets/RandomForest\_roc.png)
-
-### SVM
-!\[SVC Confusion Matrix\](assets/SVC\_cm.png)
-!\[SVC ROC Curve\](assets/SVC\_roc.png)
-
-### LightCNN
-!\[LightCNN Confusion Matrix\](assets/LightCNN\_cm.png)
-!\[LightCNN ROC Curve\](assets/LightCNN\_roc.png)
-
-## Result Discussion
-- Random Forest and SVM reach 96% test accuracy based on flattened pixel features, serving as strong traditional ML baselines.
-- LightCNN performs poorly on normal case detection due to severe class imbalance: the dataset contains far more pneumonia samples. The model tends to predict pneumonia universally.
-- Future improvements: class-balanced sampling, weighted loss function and image augmentation.
