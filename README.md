@@ -1,47 +1,61 @@
-# ML Medical Diagnosis Baseline
-Lightweight baseline project for medical image binary diagnosis, built for chest X-ray classification (Normal / Pneumonia).
+# 🏥 ML Medical Diagnosis Baseline
 
-This repository contains two model lines:
-1. Traditional Machine Learning: Random Forest, SVM (handcrafted flattened pixel features)
-2. Deep Learning: Simple Lightweight CNN
+> Lightweight baseline framework for medical image binary classification — specifically designed for chest X-ray diagnosis (Normal / Pneumonia).
 
-The pipeline automatically trains models, outputs classification metrics, confusion matrix and ROC curves.
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Kaggle Dataset](https://img.shields.io/badge/dataset-Kaggle-20beff.svg)](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
 
-## Dataset
-Public Kaggle ChestX-ray Pneumonia Dataset
-https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
+---
 
-> Note: Only a small subset of images is recommended for demo testing. Raw image folder is excluded via `.gitignore`.
+## 📋 Table of Contents
 
-## Quick Start
-1. Install dependencies
+- [Overview](#overview)
+- [Model Lines](#model-lines)
+- [Dataset](#dataset)
+- [Quick Start](#quick-start)
+- [Evaluation Outputs](#evaluation-outputs)
+- [Results Discussion](#results-discussion)
+- [Future Improvements](#future-improvements)
+- [License](#license)
+
+---
+
+## 🎯 Overview
+
+This repository provides a **minimal yet complete baseline** for medical image binary classification tasks. It implements and compares two distinct approaches:
+
+- **Traditional Machine Learning** — Random Forest & SVM using flattened pixel features
+- **Deep Learning** — A lightweight CNN architecture
+
+The pipeline automatically trains all models, evaluates performance, and generates classification metrics, confusion matrices, and ROC curves for side-by-side comparison.
+
+---
+
+## 🧠 Model Lines
+
+| Category | Models |
+|----------|--------|
+| **Traditional ML** | Random Forest, Support Vector Machine (SVM) |
+| **Deep Learning** | Lightweight CNN (LightCNN) |
+
+All models are trained and evaluated using the same data split to ensure fair comparison.
+
+---
+
+## 📊 Dataset
+
+**Source**: [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) from Kaggle
+
+- **Task**: Binary classification (Normal vs. Pneumonia)
+- **Note**: Only a small subset is recommended for demo/testing. The full raw image folder is excluded via `.gitignore`.
+
+---
+
+## 🚀 Quick Start
+
+### 1. Clone the repository
+
 ```bash
-pip install -r requirements.txt
-
-2. Organize your dataset folder
-data/raw/NORMAL/
-data/raw/PNEUMONIA/
-
-3. Launch full training pipeline
-```bash
-python main.py
-
-All evaluation charts will be saved into output/.
-
-## Model Visualization Results
-### Random Forest
-![RandomForest Confusion Matrix](assets/RandomForest_cm.png)
-![RandomForest ROC Curve](assets/RandomForest_roc.png)
-
-### SVM
-![SVC Confusion Matrix](assets/SVC_cm.png)
-![SVC ROC Curve](assets/SVC_roc.png)
-
-### LightCNN
-![LightCNN Confusion Matrix](assets/LightCNN_cm.png)
-![LightCNN ROC Curve](assets/LightCNN_roc.png)
-
-## Result Discussion
-- Random Forest and SVM reach 96% test accuracy based on flattened pixel features, serving as strong traditional ML baselines.
-- LightCNN suffers severe class imbalance in this dataset. The model tends to predict pneumonia, leading to low recall for normal samples.
-- Future improvements: class-balanced sampling, weighted loss function and image augmentation.
+git clone https://github.com/yourusername/ml-medical-diagnosis-baseline.git
+cd ml-medical-diagnosis-baseline
